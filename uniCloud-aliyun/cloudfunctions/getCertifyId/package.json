@@ -1,0 +1,7 @@
+{
+  "name": "getCertifyId",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-verify": {}
+  }
+}

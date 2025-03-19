@@ -1,0 +1,7 @@
+{
+  "name": "faceAuth",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-verify": {}
+  }
+}

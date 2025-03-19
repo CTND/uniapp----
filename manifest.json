@@ -1,0 +1,368 @@
+{
+    "name" : "闪电科技",
+    "appid" : "__UNI__B9D8DDC",
+    "description" : "陌约相亲交友",
+    "versionName" : "1.7.2",
+    "versionCode" : 172,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "compatible" : {
+            "ignoreVersion" : true,
+            "runtimeVersion" : "3.8.4,3.8.3",
+            "compilerVersion" : "3.8.3"
+        },
+        "statusbar" : {
+            "immersed" : false
+        },
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Geolocation" : {},
+            "Maps" : {},
+            "Camera" : {},
+            "Barcode" : {},
+            "OAuth" : {},
+            "VideoPlayer" : {},
+            "FacialRecognitionVerify" : {},
+            "Payment" : {},
+            "Record" : {},
+            "Share" : {},
+            "Push" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MANAGE_EXTERNAL_STORAGE\"/>"
+                ],
+                "minSdkVersion" : 21,
+                "targetSdkVersion" : 30,
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "dSYMs" : false,
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "申请访问您的相册",
+                    "NSPhotoLibraryAddUsageDescription" : "申请您的相册权限",
+                    "NSCameraUsageDescription" : "申请访问摄像头",
+                    "NSMicrophoneUsageDescription" : "申请访问麦克风"
+                },
+                "idfa" : false,
+                "UIBackgroundModes" : "audio,location"
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : true,
+                        "icons" : {
+                            "small" : {
+                                "hdpi" : "static/serve.png"
+                            }
+                        }
+                    }
+                },
+                "ad" : {},
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "f492bfb214636397792d74645b452e12",
+                        "appkey_android" : "52c4de41174b736bb2b1d12cf6d17519",
+                        "name" : "amapCSKEQuebx"
+                    },
+                    "system" : {
+                        "__platform__" : [ "ios", "android" ]
+                    }
+                },
+                "maps" : {
+                    "amap" : {
+                        "name" : "amapAW9RXQLzM",
+                        "appkey_ios" : "f492bfb214636397792d74645b452e12",
+                        "appkey_android" : "52c4de41174b736bb2b1d12cf6d17519"
+                    }
+                },
+                "oauth" : {},
+                "statics" : {},
+                "payment" : {
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wxb1915753905c7fed",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxb1915753905c7fed",
+                        "UniversalLinks" : ""
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        },
+        "nativePlugins" : {
+            "DCloud-PushSound" : {
+                "__plugin_info__" : {
+                    "name" : "DCloud-PushSound",
+                    "description" : "自定义推送铃声",
+                    "platforms" : "Android,iOS",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {}
+                }
+            },
+            "TencentCloud-TUICallKit" : {
+                "__plugin_info__" : {
+                    "name" : "TencentCloud-TUICallKit",
+                    "description" : "腾讯云音视频插件",
+                    "platforms" : "Android,iOS",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {}
+                }
+            },
+            "GW-ChooseFileModule" : {
+                "__plugin_info__" : {
+                    "name" : "文件选择 Android",
+                    "description" : "Android文件选择，支持Android 12及以上，支持多选、指定文件类型、搜索、排序。",
+                    "platforms" : "Android",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=10159",
+                    "android_package_name" : "sd.newsame.app",
+                    "ios_bundle_id" : "sd.newsame.app",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "10159",
+                    "parameters" : {}
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wxa8705888e4fac6a1",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : true,
+            "minified" : true,
+            "postcss" : true,
+            "ignoreDevUnusedFiles" : false,
+            "ignoreUploadUnusedFiles" : false
+        },
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "用于获取您的位置以便提供精确服务"
+            }
+        },
+        "requiredBackgroundModes" : [ "audio" ],
+        "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ],
+        "unipush" : {
+            "enable" : true
+        },
+        "uniStatistics" : {
+            "enable" : true
+        },
+        "lazyCodeLoading" : "requiredComponents",
+        "optimization" : {
+            "subPackages" : true
+        },
+		"mergeVirtualHostAttributes" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-baidu" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "用于获取您的位置以便提供精确服务"
+            }
+        },
+        "requiredBackgroundModes" : [ "audio" ],
+        "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ],
+        "appid" : "tt337745caac42f37e01",
+        "setting" : {
+            "postcss" : true,
+            "minified" : true,
+            "es6" : false,
+            "urlCheck" : false
+        },
+		"mergeVirtualHostAttributes" : true
+    },
+    "uniStatistics" : {
+        "enable" : false,
+        "version" : "2",
+        "reportInterval" : "10"
+    },
+    "vueVersion" : "3",
+    "locale" : "zh-Hans",
+    "h5" : {
+        "unipush" : {
+            "enable" : true
+        },
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "router" : {
+            "mode" : "history",
+            "base" : "/h5/"
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "amap" : {
+                    "key" : "f276813ae8232d87a91ec1cde9b28a43",
+                    "securityJsCode" : "a2b6d7d5db4d0867eebdf9e565098c55",
+                    "serviceHost" : "zhoui.zhizhubao.com/_AMapService/"
+                }
+            }
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        }
+    },
+    "mp-jd" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-kuaishou" : {
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "appid" : "ks706502193021816108",
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "用于获取您的位置以便提供精确服务"
+            }
+        },
+        "requiredBackgroundModes" : [ "audio" ],
+        "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ]
+    },
+    "mp-lark" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-qq" : {
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "appid" : "1112306663",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "用于获取您的位置以便提供精确服务"
+            }
+        },
+        "requiredBackgroundModes" : [ "audio" ],
+        "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ]
+    },
+    "quickapp-webview-huawei" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "quickapp-webview-union" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "app-harmony" : {
+        "distribute" : {
+            "modules" : {}
+        }
+    }
+}

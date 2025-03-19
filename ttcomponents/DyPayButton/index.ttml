@@ -1,0 +1,28 @@
+<!-- 立即抢购 -->
+<block tt:if="{{mode==2}}">  
+	<pay-button class="{{classsname}}" mode="{{2}}" goods-id="{{orderData.productId}}" goods-type="{{1}}"
+		biz-line="{{2}}" bind:getgoodsinfo="getGoodsInfo" bind:placeorder="userLogin" marketing-ready="{{true}}"
+		bind:pay="newButtonPay" bind:error="onError"></pay-button>
+</block>
+
+<block tt:if="{{mode==1}}">
+	<!-- 继续支付 -->
+	<!-- <pay-button tt:if="{{orderStatus==0}}" class="{{classsname}}" order-status="{{0}}" order-id="{{orderData.orderId}}"
+		bind:pay="handleContinutePay"></pay-button> -->
+
+	<!-- 退款 -->
+	<pay-button class="order_ljzf" 
+	order-status="{{1}}"
+	order-id="{{orderData.out_trade_no}}"
+	refund-total-amount="{{orderData.refund_money}}"
+	refund-id="{{orderData.refund_id}}"
+	catch:applyrefund="onApplyrefund" bind:refund="onRefund" catch:error="refundError"
+	tt:if="{{orderData.pay_status==1}}"></pay-button>
+
+	<!-- 退款状态 -->
+	<!-- <pay-button class="order_tk" mode="{{1}}" goods-type="{{1}}"
+		order-status="{{orderData.orderStatus=='4'?2:orderData.orderStatus=='2'?3:orderData.orderStatus=='5'?4:4 }}"
+		refund-id="{{orderData.orderId}}" biz-line="{{2}}" marketing-ready="{{true}}" catch:applyrefund="onApplyrefund"
+		catch:refund="onRefund" catch:error="refundError"
+		tt:if="{{orderData.orderStatus!=1 && orderData.orderStatus!=0}}"></pay-button> -->
+</block>

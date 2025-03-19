@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@tencentcloud/call-uikit-wechat": "^3.3.9",
+    "@tencentcloud/chat": "^3.5.2",
+    "tim-upload-plugin": "^1.4.2",
+    "uview-plus": "^3.3.64"
+  }
+}

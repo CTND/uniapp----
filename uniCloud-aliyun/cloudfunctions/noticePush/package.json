@@ -1,0 +1,7 @@
+{
+  "name": "noticePush",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-push": {}
+  }
+}

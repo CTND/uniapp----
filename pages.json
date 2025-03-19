@@ -1,0 +1,657 @@
+{
+	"easycom": {
+		// 注意一定要放在custom里，否则无效，
+		"autoscan" : true,
+		"custom": {  
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				// #ifndef MP-TOUTIAO
+				"navigationStyle":"custom",
+				// #endif 
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		},
+		
+		{
+			"path": "pages/page/index",
+			"style": {
+				// #ifndef MP-TOUTIAO
+				"navigationStyle":"custom",
+				// #endif 
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		},
+		
+		{
+			"path": "pages/same/news/index",
+			"style": {
+				"navigationBarTitleText": "消息通知",
+				// #ifndef MP-TOUTIAO
+				"navigationStyle":"custom"
+				// #endif 
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				// #ifndef MP-TOUTIAO
+				"navigationStyle":"custom"
+				// #endif 
+			}
+		},
+		
+		//*********************登录注册*************************
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				// #ifndef MP-TOUTIAO
+				"navigationStyle":"custom",
+				// #endif 
+				"app-plus": {
+					"animationType": "slide-in-bottom"
+				}
+			}
+		},
+		{
+			"path": "pages/login/wx_auth",
+			"style": {
+				"navigationBarTitleText": "授权"
+			}
+		}
+		// ****************公共部分*********************
+		
+		// #ifdef APP-PLUS
+		,
+		{
+			"path": "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
+			"style": {
+				"disableScroll": true,
+				"app-plus": {
+					"backgroundColorTop": "transparent",
+					"background": "transparent",
+					"titleNView": false,
+					"scrollIndicator": false,
+					"popGesture": "none",
+					"animationType": "fade-in",
+					"animationDuration": 200
+				}
+			}
+		}
+		// #endif
+	],
+	//分包
+	"subPackages": [
+		{
+			//********************用户相关********************
+			"root": "pages_member",
+			"pages": [
+				{
+					"path": "photos/index",
+					"style": {
+						"navigationBarTitleText": "我的相册",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				/*
+				{
+					"path": "recharge/money",
+					"style": {
+						"navigationBarTitleText": "余额充值",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "recharge/currency",
+					"style": {
+						"navigationBarTitleText": "金币充值",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "bankAccount/List",
+					"style": {
+						"navigationBarTitleText": "账户管理",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "bankAccount/edit",
+					"style": {
+						"navigationBarTitleText": "编辑账户",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "money/applyCash",
+					"style": {
+						"navigationBarTitleText": "申请提现",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "money/cashRecord",
+					"style": {
+						"navigationBarTitleText": "提现记录",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "money/cashDetail",
+					"style": {
+						"navigationBarTitleText": "提现详情",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},*/
+				{
+					"path": "money/moneyRecord",
+					"style": {
+						"navigationBarTitleText": "佣金明细",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				}
+			]
+		},
+		/*
+		{
+			//分销模块
+			"root": "pages_reseller",
+			"pages": [
+				{
+					"path" : "agree",
+					"style" : {
+						"navigationBarTitleText": "推广规则",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "index",
+					"style" : {
+						"navigationBarTitleText": "推广中心",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "join",
+					"style" : {
+						"navigationBarTitleText": "申请",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "pushRecord",
+					"style" : {
+						"navigationBarTitleText": "推广记录",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				}
+			]
+		},
+		*/
+		{
+			//全局设置
+			"root": "pages_setting",
+			"pages": [
+				{
+					"path" : "index",
+					"style" : {
+						"navigationBarTitleText": "设置中心",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "account_and_security/index",
+					"style" : {
+						"navigationBarTitleText": "账号与安全",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				// #ifdef APP-PLUS ||H5
+				{
+					"path" : "notify/index",
+					"style": {
+						"navigationBarTitleText": "消息设置",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "privacy/index",
+					"style" : {
+						"navigationBarTitleText": "隐私说明",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				//************隐私说明文件
+				{
+					"path" : "privacy/desc",
+					"style" : {
+						"navigationBarTitleText": "",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "information/face/index",
+					"style" : {
+						"navigationBarTitleText": "人脸验证",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				// #endif 
+				{
+					"path" : "privacy/privacy",
+					"style" : {
+						"navigationBarTitleText": "隐私政策",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "feedback/index",
+					"style" : {
+						"navigationBarTitleText": "帮助与反馈",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "feedback/feedback",
+					"style" : {
+						"navigationBarTitleText": "产品建议",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "about/index",
+					"style" : {
+						"navigationBarTitleText": "关于",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				
+				//***************设置编辑
+				{
+					"path" : "information/index",
+					"style" : {
+						"navigationBarTitleText": "资料管理",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "information/mobile/index",
+					"style" : {
+						"navigationBarTitleText": "手机绑定",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				/*
+				{
+					"path" : "information/password/index",
+					"style" : {
+						"navigationBarTitleText": "修改密码",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},*/
+				/*
+				{
+					"path" : "information/real_name/index",
+					"style" : {
+						"navigationBarTitleText": "实名认证",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "information/base_data/index",
+					"style" : {
+						"navigationBarTitleText": "基本信息",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "information/photo/index",
+					"style" : {
+						"navigationBarTitleText": "证件照片",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				*/
+				/**************设置附加***************/
+				{
+					"path" : "information/action/avatar",
+					"style" : {
+						"navigationBarTitleText": "设置个人头像",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				}
+			]
+		},
+		{
+			/*公共部分*/
+			"root": "pages_public",
+			"pages": [
+				{
+					"path" : "cityList/index",
+					"style" : {
+						"navigationBarTitleText": "选择城市",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "webview/index",
+					"style": {
+						"navigationBarTitleText": "",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "agree/index",
+					"style" : {
+						"navigationBarTitleText": "协议",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "notice/info",
+					"style" : {
+						"navigationBarTitleText": "公告详情",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "notify/index",
+					"style" : {
+						"navigationBarTitleText": "系统公告",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "notify/Detail",
+					"style" : {
+						"navigationBarTitleText": "公告详情",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path": "notify/notice",
+					"style": {
+						"navigationBarTitleText": "消息通知",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				}/*,
+				{
+					"path" : "essay/info",
+					"style" : {
+						"navigationBarTitleText": "详情",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				}*/
+			]
+		},
+		{
+			//转店
+			"root": "pages_transfershop",
+			"pages": [
+				{
+					"path" : "index",
+					"style" : {
+						"navigationBarTitleText": "",
+						// #ifndef MP-TOUTIAO 
+						"navigationStyle": "custom"
+						// #endif 
+					}
+				},
+				{
+					"path" : "home/index",
+					"style" : {
+						"navigationBarTitleText": "",
+						// #ifndef MP-TOUTIAO 
+						"navigationStyle": "custom"
+						// #endif 
+					}
+				},
+				{
+					"path" : "news/news",
+					"style" : {
+						"navigationBarTitleText": "",
+						// #ifndef MP-TOUTIAO 
+						"navigationStyle": "custom"
+						// #endif 
+					}
+				},
+				{
+					"path" : "info/hotList",
+					"style" : {
+						"navigationBarTitleText": "",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "info/findList",
+					"style" : {
+						"navigationBarTitleText": "找店信息",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "info/caseList",
+					"style" : {
+						"navigationBarTitleText": "成功案例",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "push/index",
+					"style" : {
+						"navigationBarTitleText": "信息发布",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "info/list",
+					"style" : {
+						"navigationBarTitleText": "转店列表",
+						// #ifndef MP-TOUTIAO
+						"navigationStyle":"custom"
+						// #endif 
+					}
+				},
+				{
+					"path" : "info/detail",
+					"style" : {
+						"navigationBarTitleText": "店铺详情",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "info/detail_more",
+					"style" : {
+						"navigationBarTitleText": "更多信息",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "push/success",
+					"style" : {
+						"navigationBarTitleText": "AI发布中心",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "order/list", 
+					"style" : {
+						"navigationBarTitleText": "我的发布",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "order/data", 
+					"style" : {
+						"navigationBarTitleText": "数据汇总",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "collect/index", 
+					"style" : {
+						"navigationBarTitleText": "我的收藏",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "periodic/index",
+					"style" : {
+						"navigationBarTitleText": "找店订阅",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				},
+				{
+					"path" : "periodic/list",
+					"style" : {
+						"navigationBarTitleText": "我的订阅",
+						// #ifdef H5
+						"navigationStyle": "custom"
+						// #endif
+					}
+				}
+			]
+		},
+		{
+			//交友
+			"root": "pages_same",
+			"pages": [
+				{
+					"path": "conversation/index",
+					"style": {
+						"navigationBarTitleText": "对话",
+						// #ifndef MP-TOUTIAO
+						"navigationStyle":"custom",
+						// #endif 
+						"app-plus": {
+							"animationType": "slide-in-bottom"
+						}
+					}
+				}
+			]
+		}
+	],
+	
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"pageOrientation": "portrait"
+	},
+	
+	
+	"uniIdRouter": {}
+}

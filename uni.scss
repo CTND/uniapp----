@@ -1,0 +1,125 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+
+/* 颜色变量 */
+@import 'uview-plus/theme.scss';
+
+$base-color: #0670F2;//#a53a2a;//#ff3766;
+
+$main: #fafafa; //主背景色f8f8f8--#f3f4f6-------------------------------这里配置全局背景色
+$lightMain: rgba($main,0.1); //淡主色
+$mainInverse:#fff; //与主色搭配的反色
+$mainGradual:linear-gradient(to top right,$main,rgba($main,0.2));//渐变主色
+$mainGradualInverse:#fff;//与渐变主色搭配的反色
+
+/* 配色 */
+// 颜色
+$color-title: #303133; // 主标题
+$color-sub: #606266; // 副标题
+$color-tip: #909399; // 辅助提示色
+$color-bg: #f5f6f8; // 背景色#f3f4f6  #f6f6f6 #f5f6f8
+$color-line: #eeeeee; //分割线
+$color-disabled: #cccccc; // 禁用色
+
+// 文字
+$font-size-base: 28rpx; // 14px，正文文字
+$font-size-toolbar: 32rpx; // 16px，用于导航栏、标题
+$font-size-sub: 26rpx; // 13px，副标题
+$font-size-tag: 24rpx; // 12px，辅助性文字/大标签
+$font-size-goods-tag: 22rpx; // 11px，商品列表角标
+$font-size-activity-tag: 20rpx; // 10px，活动角标（拼团等角标）/小标签文字
+
+$margin-both: 30rpx; //外边距 左右
+$margin-updown: 20rpx; // 外边距 上下
+$border-radius: 10rpx; //圆角
+$padding: 20rpx; //内边距
+
+/* 行为相关颜色 */
+$uni-color-primary: #007aff;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+$uni-color-yellow: #fee610;
+$uni-color-red: #ec3c3d;
+
+/* 文字基本颜色 */
+$uni-text-color:#333;//基本色
+$uni-text-color-inverse:#fff;//反色
+$uni-text-color-grey:#999;//辅助灰色，如加载更多的提示信息
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable:#c0c0c0;
+
+/* 背景颜色 */
+$uni-bg-color:#ffffff;
+$uni-bg-color-grey:#f8f8f8;
+$uni-bg-color-hover:#f1f1f1;//点击状态颜色
+$uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
+
+/* 边框颜色 */
+$uni-border-color:#c8c7cc;
+
+/* 尺寸变量 */
+
+/* 文字尺寸 */
+$uni-font-size-sm:12px;
+$uni-font-size-base:14px;
+$uni-font-size-lg:16;
+
+/* 图片尺寸 */
+$uni-img-size-sm:20px;
+$uni-img-size-base:26px;
+$uni-img-size-lg:40px;
+
+/* Border Radius */
+$uni-border-radius-sm: 2px;
+$uni-border-radius-base: 3px;
+$uni-border-radius-lg: 6px;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 5px;
+$uni-spacing-row-base: 10px;
+$uni-spacing-row-lg: 15px;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 4px;
+$uni-spacing-col-base: 8px;
+$uni-spacing-col-lg: 12px;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$uni-color-title: #2C405A; // 文章标题颜色
+$uni-font-size-title:20px;
+$uni-color-subtitle: #555555; // 二级标题颜色
+$uni-font-size-subtitle:26px;
+$uni-color-paragraph: #3F536E; // 文章段落颜色
+$uni-font-size-paragraph:15px;
+/*
+button{
+	padding: 0;
+	margin: 0;
+	background-color: #FFFFFF;
+	padding-left:0!important;
+	padding-right:0!important;
+	border: none;
+	&.button-hover[type='primary'] {
+		background-color: #ffffff;
+		&[plain] {
+			background-color: #ffffff;
+		}
+	}
+}
+*/
